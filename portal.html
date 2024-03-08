@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="index.html" />
-    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css" />
+    <title>Students Dashboard</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
   <body>
 
-    <div class="header text-center "><h2>Student Info Dashboard</h2></div>
+    <div class="header text-center text-decoration-underline my-4 fw-bold "><h2>👨🏾‍💻 Student Info Dashboard 👩🏾‍💻</h2></div>
     
     <!-- Table -->
     <div class="container">
@@ -22,12 +22,11 @@
     </div>
     
     <script src="script.js"></script>
-
     <script>
         let user = JSON.parse(localStorage.getItem("user"));
-            let modal = document.getElementsByClassName('modal')
-        function display() 
-            var table = `<table>`;
+            
+        function display() {
+            let table = `<table>`;
                 table += `<th>S/N</th>`;
                 table += `<th>First Name</th>`;
                 table += `<th>Last Name</th>`;
@@ -38,20 +37,22 @@
                    table += `<td>${i + 1}</td>`;
                     table += `<td>${item.firstName}</td>`;
                     table += `<td>${item.lastName}</td>`;
-                    table += `<td>${item.emaiL}</td>`;
+                    table += `<td>${item.email}</td>`;
                     table += `<td><button class="btn btn-outline-danger px-2 fw-bold" onclick="del(${i})"><i class="fa-solid fa-trash-can"></i></button></td>`;
                     table += `<td><button class="btn btn-outline-warning px-2 fw-bold" onclick="${edit(i)}"><i class="fa-regular fa-pen-to-square fw-bold"></i></button></td>`;
                     table += `</tr>`;
                 });
             table += `</table>`;
             show.innerHTML = table;
-    
+        }        
         function del(i) {
             user.splice(i, 1);
             display();
         }  
 
-        function edit(i) {}
+        function edit(i) {
+
+        }
 
       display();
     </script>

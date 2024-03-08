@@ -5,19 +5,19 @@ if(localStorage.user){
 }
 
 function submit() {
-    var firstName = document.getElementById("firstName").value
-    var lastName = document.getElementById("lastName").value
-    var emailPhone = document.getElementById("email").value
-    var password =  document.getElementById("password").value
+    const firstName = document.getElementById("firstName").value
+    const lastName = document.getElementById("lastName").value
+    const email = document.getElementById("email").value
+    const password =  document.getElementById("password").value
 
     if (firstName === '' || lastName ===  '' || email === '' || password === '') {
+        console.log("you no fit submit anything with an input left empty, alaye");
         emptyField.style.display =  "block"
-        // alert("Input fields mustn't be left empty")
     } else {
         var confirmation = confirm('Are you sure you want to submit the provided information?')
             if (confirmation) {
                 emptyField.style.display = "none"
-                var inputObj = {firstName,lastName,email,password}
+                let inputObj = {firstName,lastName,email,password}
                 studentsArray.push(inputObj)
                 let user = localStorage.setItem('user', JSON.stringify(studentsArray))
                 console.log(studentsArray);
