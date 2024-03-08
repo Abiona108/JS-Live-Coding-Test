@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="container mt-lg-5 mt-3 shadow-lg justify-content-center ">
+
+        <!-- Page Header -->
+        <h3 class="text-center fw-bold fs-1 py-3 text-decoration-underline border-end-0 ">👩🏾‍🎓 EXCELLING STUDENT PORTAL 👨🏾‍🎓</h3>
+        
+        <!-- Empty field alert -->
+        <div class=" bg-danger text-white fw-bold text-center p-2 rounded-1 " id="emptyField" style="display: none;">Input fields can't be submitted empty</div>
+        
+        <!-- First Name Input -->
+        <div class="my-2">
+            <label for="" class="form-label mb-3 fw-bold ">First Name:</label>
+            <input type="text" name="" id="firstName" class="form-control border-3" placeholder="enter first name here">
+        </div>
+        
+        <!-- Last Name input -->
+        <div class="my-2">
+            <label for="" class="form-label fw-bold ">Last Name:</label>
+            <input type="text" name="" id="lastName" class="form-control   border-3" placeholder="enter last name here">
+        </div>
+        
+        <!-- Email input -->
+        <div class="my-2">
+            <label for="" class="form-label fw-bold ">Email:</label>
+            <input type="text" name="" id="email" class="form-control border-3" placeholder="enter email here" >
+        </div>
+
+        <!-- password input-->
+        <div class="my-2">
+            <label for="" class="form-label fw-bold ">Password:</label>
+            <input type="password" name="" id="password" class="form-control  border-3" placeholder="enter password">
+        </div>
+        
+        <!-- Submit button -->
+        <button class="btn btn-outline-dark border-2 w-100 my-3 py-2 fw-bold fs-1 " onclick="submit()">Submit</button>
+        
+       
+
+        <!-- Date & Time -->
+        <div class="text-center display-6 my-3 pb-3  " id="dateTimeId"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
